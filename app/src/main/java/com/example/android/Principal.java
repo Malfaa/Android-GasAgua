@@ -31,6 +31,7 @@ public class Principal extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapterqtdp1 = ArrayAdapter.createFromResource(this,
                 R.array.quantidade, android.R.layout.simple_spinner_item);
 
+        //testando
         qtdp1.setAdapter(adapterqtdp1);
     }
 
