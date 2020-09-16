@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Principal">
+
+    <TextView
+        android:id="@+id/P1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="16dp"
+        android:drawableStart="@drawable/ic_waves"
+        android:text="@string/escolha_seu_produto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/EP1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="277dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/naoSim"
+        android:textOff="@string/nao"
+        android:textOn="@string/sim"
+        app:layout_constraintBottom_toTopOf="@+id/formaDePaga"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/valorTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="56dp"
+        android:text="@string/valorT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/endereco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/EP1"
+        android:layout_width="250dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="20dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@+id/QTD1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/formaDePaga"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="197dp"
+        android:layout_marginBottom="12dp"
+        android:drawableStart="@drawable/ic_waves"
+        android:text="@string/formaDeP"
+        app:layout_constraintBottom_toTopOf="@+id/formaDePagaVar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/formaDePagaVar"
+        android:layout_width="250dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="20dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@+id/nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/endereco"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:hint="@string/endereco"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/totalCompra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/desejaAlgoMais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="222dp"
+        android:layout_marginBottom="20dp"
+        android:drawableStart="@drawable/ic_waves"
+        android:text="@string/deseja_algo_mais"
+        app:layout_constraintBottom_toTopOf="@+id/switch1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/QTDP1"
+        android:layout_width="250dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="20dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@+id/desejaAlgoMais"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/totalCompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/totalC"
+        app:layout_constraintBottom_toTopOf="@+id/valorTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="114dp"
+        android:text="@string/enviarpedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/valorTotal" />
+
+    <TextView
+        android:id="@+id/QTD1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="242dp"
+        android:layout_marginBottom="12dp"
+        android:drawableStart="@drawable/ic_waves"
+        android:text="@string/quantidade"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/QTDP1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

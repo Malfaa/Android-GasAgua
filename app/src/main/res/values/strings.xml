@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Android</string>
+    <string name="fazer_pedido">Fazer Pedido</string>
+    <string name="imagem">\@string/Imagem</string>
+    <string name="quantidade">QUANTIDADE:</string>
+    <string name="escolha_seu_produto">ESCOLHA SEU PRODUTO:</string>
+    <string name="deseja_algo_mais">DESEJA ALGO MAIS?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="naoSim">Não/Sim</string>
+    <string name="nome">Nome: </string>
+    <string name="endereco">Endereco: </string>
+    <string name="totalC">TOTAL DA COMPRA: </string>
+    <string name="valorT">R$ </string>
+    <string name="formaDeP">FORMA DE PAGAMENTO:</string>
+    <string name="enviarpedido">ENVIAR PEDIDO</string>
+
+    <string-array name="produtos">
+        <item>Água 20L<n/></item>
+        <item>Gás 13KG</item>
+    </string-array>
+
+    <string-array name="quantidade">
+        <item> 0 </item>
+        <item> 1 </item>
+        <item> 2 </item>
+        <item> 3 </item>
+        <item> 4 </item>
+    </string-array>
+    
+    <string-array name="escolha">
+        <item>Sim</item>
+        <item>Não</item>
+    </string-array>
+
+    <string-array name="formaPagamento">
+        <item>Cartão</item>
+        <item>Dinheiro</item>
+    </string-array>
+
+
+</resources>
