@@ -45,14 +45,17 @@ public class Principal extends AppCompatActivity {
         conteudoEscondido.setVisibility(View.GONE);
 
 
-        ArrayAdapter<CharSequence> adapterp1 = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> adapterp = ArrayAdapter.createFromResource(this,
                 R.array.produtos, android.R.layout.simple_spinner_item);
-        ep1.setAdapter(adapterp1);
+        ep1.setAdapter(adapterp);
+        ep2.setAdapter(adapterp);
 
 
-        ArrayAdapter<CharSequence> adapterqtdp1 = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> adapterqtdp = ArrayAdapter.createFromResource(this,
                 R.array.quantidade, android.R.layout.simple_spinner_item);
-        qtdp1.setAdapter(adapterqtdp1);
+        qtdp1.setAdapter(adapterqtdp);
+        qtdp2.setAdapter(adapterqtdp);
+
 
 
         ArrayAdapter<CharSequence> adapterConfirmaMais = ArrayAdapter.createFromResource(this,
@@ -66,12 +69,13 @@ public class Principal extends AppCompatActivity {
 
         //Variaveis objetos
         ep1Var = ep1.getSelectedItem().toString();
-        qtdp1Var = Integer.parseInt(String.valueOf(qtdp1));
+
+        qtdp1Var = Integer.parseInt(qtdp1.getSelectedItem().toString());
 
         confirmaMaisVar = confirmaMais.getSelectedItem().toString();
 
         ep2Var = ep2.getSelectedItem().toString();
-        qtdp2Var = Integer.parseInt(String.valueOf(qtdp2));
+        qtdp2Var =  Integer.parseInt(qtdp2.getSelectedItem().toString());
 
         formaDePagVar = formaDePag.getSelectedItem().toString();
         trocoVar = troco.getInputType();
@@ -99,6 +103,8 @@ public class Principal extends AppCompatActivity {
         }else{
             assert true;
         }
+
+        enviarPedido = findViewById(R.id.enviarPedido);
 
         enviarPedido.setOnClickListener(v -> {
             String url = "https://api.whatsapp.com/send?phone="+number;

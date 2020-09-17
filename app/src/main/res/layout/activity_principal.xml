@@ -63,6 +63,7 @@
                 android:id="@+id/conteudoDois"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -74,9 +75,9 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <Spinner
-                    android:id="@+id/QTDP2"
-                    android:layout_width="250dp"
-                    android:layout_height="match_parent"
+                    android:id="@+id/EP2"
+                    android:layout_width="match_parent"
+                    android:layout_height="23dp"
                     android:layout_marginTop="10dp"
                     android:spinnerMode="dialog" />
 
@@ -90,8 +91,8 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <Spinner
-                    android:id="@+id/EP2"
-                    android:layout_width="match_parent"
+                    android:id="@+id/QTDP2"
+                    android:layout_width="250dp"
                     android:layout_height="23dp"
                     android:layout_marginTop="10dp"
                     android:spinnerMode="dialog" />
@@ -127,7 +128,7 @@
                 android:id="@+id/NOME"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="@string/nomeSobrenome"
                 android:importantForAutofill="no"
@@ -141,7 +142,7 @@
                 android:ems="10"
                 android:hint="@string/endereco"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
+                android:inputType="textPostalAddress" />
 
             <EditText
                 android:id="@+id/numero"
