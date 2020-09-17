@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -8,103 +7,160 @@
     tools:context=".Principal">
 
 
-    <TextView
-        android:id="@+id/P1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:drawableStart="@drawable/ic_waves"
-        android:text="@string/escolha_seu_produto"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-    <Spinner
-        android:id="@+id/EP1"
-        android:layout_width="match_parent"
-        android:layout_height="23dp"
-        android:layout_marginTop="10dp"
-        android:spinnerMode="dialog" />
-
-    <TextView
-        android:id="@+id/QTD1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:drawableStart="@drawable/ic_waves"
-        android:text="@string/quantidade"
-        android:layout_marginTop="30dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-    <Spinner
-        android:id="@+id/QTDP1"
-        android:layout_width="250dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:spinnerMode="dialog" />
-
-    <TextView
-        android:id="@+id/desejaAlgoMais"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
-        android:drawableStart="@drawable/ic_waves"
-        android:text="@string/deseja_algo_mais" />
-
-    <Spinner
-        android:id="@+id/confirmMais"
-        android:layout_width="250dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:spinnerMode="dialog" />
 
     <LinearLayout
-        android:id="@+id/conteudoDois"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/P2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableStart="@drawable/ic_waves"
-            android:text="@string/escolhaOutroProduto"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
-
-        <Spinner
-            android:id="@+id/QTDP2"
-            android:layout_width="250dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:spinnerMode="dialog" />
-
-        <TextView
-            android:id="@+id/QTD2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
-            android:drawableStart="@drawable/ic_waves"
-            android:text="@string/quantidade"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-        <Spinner
-            android:id="@+id/EP2"
             android:layout_width="match_parent"
-            android:layout_height="23dp"
-            android:layout_marginTop="10dp"
-            android:spinnerMode="dialog" />
-    </LinearLayout>
-    <TextView
-        android:id="@+id/formaDePaga"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:drawableStart="@drawable/ic_waves"
-        android:text="@string/formaDeP" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Spinner
-        android:id="@+id/formaDePagaVar"
-        android:layout_width="250dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:spinnerMode="dialog" />
+            <TextView
+                android:id="@+id/P1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableStart="@drawable/ic_waves"
+                android:text="@string/escolha_seu_produto"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
+            <Spinner
+                android:id="@+id/EP1"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dialog" />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/QTD1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:drawableStart="@drawable/ic_waves"
+                android:text="@string/quantidade"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <Spinner
+                android:id="@+id/QTDP1"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:id="@+id/desejaAlgoMais"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:drawableStart="@drawable/ic_waves"
+                android:text="@string/deseja_algo_mais" />
+
+            <Spinner
+                android:id="@+id/confirmMais"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dialog" />
+
+            <LinearLayout
+                android:id="@+id/conteudoDois"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/P2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_waves"
+                    android:text="@string/escolhaOutroProduto"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <Spinner
+                    android:id="@+id/QTDP2"
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:spinnerMode="dialog" />
+
+                <TextView
+                    android:id="@+id/QTD2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:drawableStart="@drawable/ic_waves"
+                    android:text="@string/quantidade"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <Spinner
+                    android:id="@+id/EP2"
+                    android:layout_width="match_parent"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="10dp"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pagamento"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/ic_waves"
+                android:text="@string/formaDeP" />
+
+            <Spinner
+                android:id="@+id/formaDePaga"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dialog" />
+
+            <EditText
+                android:id="@+id/troco"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints="10.00"
+                android:ems="10"
+                android:hint="@string/hint"
+                android:inputType="number"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/NOME"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/nomeSobrenome"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/ENDERECO"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/endereco"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/numero"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints="10.00"
+                android:ems="10"
+                android:hint="@string/hintNumero"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/enviarPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#E4CAF4"
+                android:text="@string/enviarPedido" />
+        </LinearLayout>
+
+</ScrollView>
