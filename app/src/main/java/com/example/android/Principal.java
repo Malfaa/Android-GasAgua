@@ -13,7 +13,8 @@ public class Principal extends AppCompatActivity {
 
     protected Spinner ep1, qtdp1,ep2, qtdp2,confirmaMais;
     protected LinearLayout conteudoEscondido;
-
+    protected String ep1Var, confirmaMaisVar,ep2Var;
+    protected static int valorT, qtdp1Var,qtdp2Var;
 
 
     @Override
@@ -21,6 +22,7 @@ public class Principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
+        //Spinner e variaveis de "reconhecimento"
         ep1 = findViewById(R.id.EP1);
         qtdp1 = findViewById(R.id.QTDP1);
         confirmaMais = findViewById(R.id.confirmMais);
@@ -29,6 +31,7 @@ public class Principal extends AppCompatActivity {
         conteudoEscondido = findViewById(R.id.conteudoDois);
 
         conteudoEscondido.setVisibility(View.INVISIBLE);
+
 
         ArrayAdapter<CharSequence> adapterp1 = ArrayAdapter.createFromResource(this,
                 R.array.produtos, android.R.layout.simple_spinner_item);
@@ -45,13 +48,34 @@ public class Principal extends AppCompatActivity {
         confirmaMais.setAdapter(adapterConfirmaMais);
 
 
-        String respConfirmaMais = confirmaMais.getSelectedItem().toString();
+        //Variaveis objetos
+        ep1Var = ep1.getSelectedItem().toString();
+        qtdp1Var = Integer.parseInt(String.valueOf(qtdp1));
 
-        if(respConfirmaMais.equals("Sim")){
+        confirmaMaisVar = confirmaMais.getSelectedItem().toString();
+
+        ep2Var = ep2.getSelectedItem().toString();
+        qtdp2Var = Integer.parseInt(String.valueOf(qtdp2));
+
+
+        if(ep1Var.equals("Gás 13KG")){
+            valorT += (85*qtdp1Var);
+        }else{
+            valorT += (10*qtdp1Var);
+        }
+        if(confirmaMaisVar.equals("Sim")){
             conteudoEscondido.setVisibility(View.VISIBLE);
         }else{
-            conteudoEscondido.setVisibility(View.INVISIBLE);
+            assert true;
         }
+
+        if(ep2Var.equals("Gás 13KG")){
+            valorT += (85*qtdp2Var);
+        }else{
+            valorT += (10*qtdp2Var);
+        }
+
+
     }
 
 }
