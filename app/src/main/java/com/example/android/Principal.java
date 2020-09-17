@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class Principal extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class Principal extends AppCompatActivity {
     protected static float trocoVar;
     protected EditText troco, number;
     protected Button enviarPedido;
+    protected TextView compraValorFinal;
 
 
     @Override
@@ -40,6 +42,7 @@ public class Principal extends AppCompatActivity {
         formaDePag = findViewById(R.id.formaDePaga);
         troco = findViewById(R.id.troco);
         number = findViewById(R.id.numero);
+        compraValorFinal = findViewById(R.id.totalValorVar);
 
 
         conteudoEscondido.setVisibility(View.GONE);
@@ -103,6 +106,8 @@ public class Principal extends AppCompatActivity {
         }else{
             assert true;
         }
+
+        compraValorFinal.append("R$ "+valorT);
 
         enviarPedido = findViewById(R.id.enviarPedido);
 

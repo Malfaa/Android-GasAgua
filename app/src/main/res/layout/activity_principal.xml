@@ -17,6 +17,7 @@
                 android:id="@+id/P1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:drawableStart="@drawable/ic_waves"
                 android:text="@string/escolha_seu_produto"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -154,7 +155,23 @@
                 android:hint="@string/hintNumero"
                 android:inputType="number" />
 
-            <Button
+        <TextView
+            android:id="@+id/totalValor"
+            android:layout_height="20dp"
+            android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="80dp"
+            android:text="@string/totalC" />
+
+        <TextView
+            android:id="@+id/totalValorVar"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="115dp"
+            android:text="@string/valorT" />
+
+        <Button
                 android:id="@+id/enviarPedido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -162,6 +179,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="#E4CAF4"
                 android:text="@string/enviarPedido" />
-        </LinearLayout>
+
+    </LinearLayout>
 
 </ScrollView>
