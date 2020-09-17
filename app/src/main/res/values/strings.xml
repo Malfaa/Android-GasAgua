@@ -14,9 +14,12 @@
     <string name="valorT">R$ </string>
     <string name="formaDeP">FORMA DE PAGAMENTO:</string>
     <string name="enviarpedido">ENVIAR PEDIDO</string>
+    <string name="escolhaOutroProduto">ESCOLHA SEGUNDO PRODUTO: </string>
 
     <string-array name="produtos">
+        <item> </item>
         <item>Água 20L<n/></item>
+        <item> </item>
         <item>Gás 13KG</item>
     </string-array>
 
@@ -28,13 +31,15 @@
         <item> 4 </item>
     </string-array>
     
-    <string-array name="escolha">
-        <item>Sim</item>
+    <string-array name="confirmaMais">
         <item>Não</item>
+        <item> </item>
+        <item>Sim</item>
     </string-array>
 
     <string-array name="formaPagamento">
         <item>Cartão</item>
+        <item> </item>
         <item>Dinheiro</item>
     </string-array>
 
