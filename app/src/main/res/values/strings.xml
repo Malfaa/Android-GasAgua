@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android</string>
+    <string name="app_name">GásÁguaApp</string>
     <string name="fazer_pedido">Fazer Pedido</string>
     <string name="imagem">\@string/Imagem</string>
     <string name="quantidade">QUANTIDADE:</string>
@@ -7,10 +7,9 @@
     <string name="deseja_algo_mais">DESEJA ALGO MAIS?</string>
     <string name="sim">Sim</string>
     <string name="nao">Não</string>
-    <string name="naoSim">Não/Sim</string>
     <string name="endereco">Bairro, Rua, Número </string>
     <string name="totalC">TOTAL DA COMPRA: </string>
-    <string name="valorT">R$ </string>
+    <string name="valorT">&#160;</string>
     <string name="formaDeP">FORMA DE PAGAMENTO:</string>
     <string name="enviarpedido">ENVIAR PEDIDO</string>
     <string name="escolhaOutroProduto">ESCOLHA SEGUNDO PRODUTO: </string>
@@ -23,7 +22,6 @@
     <string-array name="produtos">
         <item> </item>
         <item>Água 20L<n/></item>
-        <item> </item>
         <item>Gás 13KG</item>
     </string-array>
 
@@ -37,7 +35,6 @@
     
     <string-array name="confirmaMais">
         <item>Não</item>
-        <item> </item>
         <item>Sim</item>
     </string-array>
 
