@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +13,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import static java.lang.String.valueOf;
 
 public class Principal extends AppCompatActivity {
 
@@ -26,99 +27,128 @@ public class Principal extends AppCompatActivity {
     protected Button enviarPedido;
     protected TextView compraValorFinal;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_principal);
 
-        //Spinner e variaveis de "reconhecimento"
-        ep1 = findViewById(R.id.EP1);
-        qtdp1 = findViewById(R.id.QTDP1);
-        confirmaMais = findViewById(R.id.confirmMais);
-        ep2 = findViewById(R.id.EP2);
-        qtdp2 = findViewById(R.id.QTDP2);
-        conteudoEscondido = findViewById(R.id.conteudoDois);
-        formaDePag = findViewById(R.id.formaDePaga);
-        troco = findViewById(R.id.troco);
-        number = findViewById(R.id.numero);
-        compraValorFinal = findViewById(R.id.totalValorVar);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_principal);
 
-
-        conteudoEscondido.setVisibility(View.GONE);
+            //Spinner e variaveis de "reconhecimento"
+            ep1 = findViewById(R.id.EP1);
+            qtdp1 = findViewById(R.id.QTDP1);
+            confirmaMais = findViewById(R.id.confirmMais);
+            ep2 = findViewById(R.id.EP2);
+            qtdp2 = findViewById(R.id.QTDP2);
+            conteudoEscondido = findViewById(R.id.conteudoDois);
+            formaDePag = findViewById(R.id.formaDePaga);
+            troco = findViewById(R.id.troco);
+            number = findViewById(R.id.numero);
+            compraValorFinal = findViewById(R.id.totalValorVar);
 
 
-        ArrayAdapter<CharSequence> adapterp = ArrayAdapter.createFromResource(this,
-                R.array.produtos, android.R.layout.simple_spinner_item);
-        ep1.setAdapter(adapterp);
-        ep2.setAdapter(adapterp);
+            conteudoEscondido.setVisibility(View.GONE);
 
 
-        ArrayAdapter<CharSequence> adapterqtdp = ArrayAdapter.createFromResource(this,
-                R.array.quantidade, android.R.layout.simple_spinner_item);
-        qtdp1.setAdapter(adapterqtdp);
-        qtdp2.setAdapter(adapterqtdp);
+            ArrayAdapter<CharSequence> adapterp = ArrayAdapter.createFromResource(this,
+                    R.array.produtos, android.R.layout.simple_spinner_item);
+            ep1.setAdapter(adapterp);
+            ep2.setAdapter(adapterp);
 
 
-
-        ArrayAdapter<CharSequence> adapterConfirmaMais = ArrayAdapter.createFromResource(this,
-                R.array.confirmaMais, android.R.layout.simple_spinner_item);
-        confirmaMais.setAdapter(adapterConfirmaMais);
-
-        ArrayAdapter<CharSequence> adapterFormaDePag = ArrayAdapter.createFromResource(this,
-                R.array.formaPagamento, android.R.layout.simple_spinner_item);
-        formaDePag.setAdapter(adapterFormaDePag);
+            ArrayAdapter<CharSequence> adapterqtdp = ArrayAdapter.createFromResource(this,
+                    R.array.quantidade, android.R.layout.simple_spinner_item);
+            qtdp1.setAdapter(adapterqtdp);
+            qtdp2.setAdapter(adapterqtdp);
 
 
-        //Variaveis objetos
-        ep1Var = ep1.getSelectedItem().toString();
+            ArrayAdapter<CharSequence> adapterConfirmaMais = ArrayAdapter.createFromResource(this,
+                    R.array.confirmaMais, android.R.layout.simple_spinner_item);
+            confirmaMais.setAdapter(adapterConfirmaMais);
 
-        qtdp1Var = Integer.parseInt(qtdp1.getSelectedItem().toString());
+            ArrayAdapter<CharSequence> adapterFormaDePag = ArrayAdapter.createFromResource(this,
+                    R.array.formaPagamento, android.R.layout.simple_spinner_item);
+            formaDePag.setAdapter(adapterFormaDePag);
 
-        confirmaMaisVar = confirmaMais.getSelectedItem().toString();
+            class listenerDoSpinner implements AdapterView.OnItemSelectedListener {
 
-        ep2Var = ep2.getSelectedItem().toString();
-        qtdp2Var =  Integer.parseInt(qtdp2.getSelectedItem().toString());
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    //Variaveis objetos
+                    ep1Var = ep1.getSelectedItem().toString();
 
-        formaDePagVar = formaDePag.getSelectedItem().toString();
-        trocoVar = troco.getInputType();
+                    qtdp1Var = Integer.parseInt(qtdp1.getSelectedItem().toString());
 
-        if(ep1Var.equals("Gás 13KG")){
-            valorT += (85*qtdp1Var);
-        }else{
-            valorT += (10*qtdp1Var);
+                    confirmaMaisVar = confirmaMais.getSelectedItem().toString();
+
+                    ep2Var = ep2.getSelectedItem().toString();
+                    qtdp2Var = Integer.parseInt(qtdp2.getSelectedItem().toString());
+
+                    formaDePagVar = formaDePag.getSelectedItem().toString();
+                    trocoVar = troco.getInputType();
+
+
+                    if (ep1Var.equals("Gás 13KG")) {
+                        valorT += (85 * qtdp1Var);
+                    } else {
+                        valorT += (10 * qtdp1Var);
+                    }
+                    if (confirmaMaisVar.equals("Sim")) {
+                        conteudoEscondido.setVisibility(View.VISIBLE);
+                    } else {
+                        conteudoEscondido.setVisibility(View.GONE);
+                    }
+
+                    if (ep2Var.equals("Gás 13KG")) {
+                        valorT += (85 * qtdp2Var);
+                    } else {
+                        valorT += (10 * qtdp2Var);
+                    }
+                    if (formaDePagVar.equals("Dinheiro")) {
+                        troco.setVisibility(View.VISIBLE);
+                    } else {
+                        troco.setVisibility(View.GONE);
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            }
+
+            ep1.setOnItemSelectedListener(new listenerDoSpinner());
+            qtdp1.setOnItemSelectedListener(new listenerDoSpinner());
+            qtdp2.setOnItemSelectedListener(new listenerDoSpinner());
+            ep2.setOnItemSelectedListener(new listenerDoSpinner());
+            formaDePag.setOnItemSelectedListener(new listenerDoSpinner());
+            confirmaMais.setOnItemSelectedListener(new listenerDoSpinner());
+
+            compraValorFinal.setText(valorT);
+
+            enviarPedido = findViewById(R.id.enviarPedido);
+
+            enviarPedido.setOnClickListener(v -> {
+                String url = "https://api.whatsapp.com/send?phone=" + number;
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            });
         }
-        if(confirmaMaisVar.equals("Sim")){
-            TransitionManager.beginDelayedTransition(conteudoEscondido);
 
-            conteudoEscondido.setVisibility(View.VISIBLE);
-        }else{
-            assert true;
+
+
+        /*
+    public class Spinner extends Activity implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+
+            // parent.getItemAtPosition(pos)
         }
 
-        if(ep2Var.equals("Gás 13KG")){
-            valorT += (85*qtdp2Var);
-        }else{
-            valorT += (10*qtdp2Var);
+        public void onNothingSelected(AdapterView<?> parent) {
+            // Another interface callback
         }
-        if (formaDePagVar.equals("Dinheiro")){
-            troco.setVisibility(View.VISIBLE);
-        }else{
-            assert true;
-        }
+    }*/
 
-        compraValorFinal.append("R$ "+valorT);
-
-        enviarPedido = findViewById(R.id.enviarPedido);
-
-        enviarPedido.setOnClickListener(v -> {
-            String url = "https://api.whatsapp.com/send?phone="+number;
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            startActivity(i);
-        });
-
-
-    }
 
 }

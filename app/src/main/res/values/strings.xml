@@ -14,7 +14,7 @@
     <string name="formaDeP">FORMA DE PAGAMENTO:</string>
     <string name="enviarpedido">ENVIAR PEDIDO</string>
     <string name="escolhaOutroProduto">ESCOLHA SEGUNDO PRODUTO: </string>
-    <string name="hint">10.00</string>
+    <string name="hintTroco">Troco Para:(Exemplo) 10.00</string>
     <string name="nomeSobrenome">Nome Sobrenome</string>
     <string name="hintNumero">Numero Exemplo: 5511987654321</string>
     <string name="enviarPedido">Enviar Pedido</string>
