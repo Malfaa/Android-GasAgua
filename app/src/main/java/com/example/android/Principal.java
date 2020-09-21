@@ -14,15 +14,14 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import static java.lang.String.valueOf;
+
 
 public class Principal extends AppCompatActivity {
 
     protected Spinner ep1, qtdp1,ep2, qtdp2,confirmaMais, formaDePag;
     protected LinearLayout conteudoEscondido;
-    protected String ep1Var, confirmaMaisVar, ep2Var, formaDePagVar;
-    protected static int valorT , qtdp1Var,qtdp2Var;
-    protected static float trocoVar;
+    protected String  confirmaMaisVar,ep1Var,ep2Var;
+    protected static int valorT, valorP1, valorP2;
     protected EditText troco, celularNumero, nome, endereco;
     protected Button enviarPedido;
     protected TextView compraValorFinal;
@@ -67,47 +66,39 @@ public class Principal extends AppCompatActivity {
     }
 
     class listenerDoSpinner implements AdapterView.OnItemSelectedListener {
-        protected int valorT;
 
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            //Variaveis objetos
-            ep1Var = ep1.getSelectedItem().toString();
-            qtdp1Var = Integer.parseInt(qtdp1.getSelectedItem().toString());
-
             confirmaMaisVar = confirmaMais.getSelectedItem().toString();
-
+            ep1Var = ep1.getSelectedItem().toString();
             ep2Var = ep2.getSelectedItem().toString();
-            qtdp2Var = Integer.parseInt(qtdp2.getSelectedItem().toString());
 
-            formaDePagVar = formaDePag.getSelectedItem().toString();
-            trocoVar = troco.getInputType();
+            if (ep1Var.equals("Gás 13KG")) {//ep1Var.equals
+                valorP1 = 85 *Integer.parseInt(qtdp1.getSelectedItem().toString());
+            } else {//if(parent.getItemAtPosition(position).equals("Água 20L"))
+                valorP1 = 10 * Integer.parseInt(qtdp1.getSelectedItem().toString());}//qtdp1Var
 
-
-            if (ep1Var.equals("Gás 13KG")) {
-                valorT += (85 * qtdp1Var);
-            } else {
-                valorT += (10 * qtdp1Var);
-            }
             if (confirmaMaisVar.equals("Sim")) {
                 conteudoEscondido.setVisibility(View.VISIBLE);
-            } else {
+            }else {
                 conteudoEscondido.setVisibility(View.GONE);
-            }
 
-            if (ep2Var.equals("Gás 13KG")) {
-                valorT += (85 * qtdp2Var);
+            }if (ep2Var.equals("Gás 13KG")) {
+                valorP2 = (85 * Integer.parseInt(qtdp2.getSelectedItem().toString()));
             } else {
-                valorT += (10 * qtdp2Var);
+                valorP2 = (10 * Integer.parseInt(qtdp2.getSelectedItem().toString()));
             }
-            if (formaDePagVar.equals("Dinheiro")) {
+            if (parent.getItemAtPosition(position).equals("Dinheiro")) {
                 troco.setVisibility(View.VISIBLE);
             } else {
                 troco.setVisibility(View.GONE);
             }
+            valorT= valorP1+valorP2;
+            compraValorFinal.setText(String.valueOf(valorT));
         }
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
+            compraValorFinal.setText(String.valueOf(valorT));
         }
     }
 
@@ -136,23 +127,14 @@ public class Principal extends AppCompatActivity {
 
             setandoListenerSpinner();
 
-
-            nome.getText();
-            endereco.getText();
-            troco.getText();
-            celularNumero.getText();
-
-            //compraValorFinal.append("R$ " +valorT + ".00");
-            compraValorFinal.setText("R$ ");
-            compraValorFinal.append(""+valorT);
-            compraValorFinal.getText();
-
-
             enviarPedido.setOnClickListener(v -> {
-                String url = "https://api.whatsapp.com/send?phone=" + celularNumero;
+                String url = "https://api.whatsapp.com/send?phone=" + celularNumero.getText() + "&text=---NOVO%20PEDIDO---%20%0ACliente%3A%20" + nome.getText()+"%0A%0AEndereco%3A%20%"+
+                        endereco.getText()+"%0A%0AQuantidade%2F%20Produto%3A%20%0A"+qtdp1.getSelectedItem()+" "+ep1.getSelectedItem()+"%20%0A%0AForma%20De%20Pagamento%3A%20"+
+                        formaDePag.getSelectedItem()+"%20%0AValor%20Total%3A%20R$%20"+valorT+"%0A%0A %20%0A FIM%20DO%20PEDIDO%0A";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
             });
         }
-}//https://api.whatsapp.com/send?phone=0&text=----%20NOVO%20PEDIDO%20----%0A%0A CLIENTE%3A%20a%0A%0A ENDEREÇO%3A%20b%0A%0A QTD%20/%20PRODUTO%3A%0A0%20Água 20L%0A 0%20%0A%0A FORMA%20DE%20PAGAMENTO%3A%20Cartão%20%0A VALOR%20TOTAL%3A%20R$ 0.00%0A%0A %20%0A FIM%20DO%20PEDIDO%0A
+}
+//https://api.whatsapp.com/send?phone=0&text=----%20NOVO%20PEDIDO%20----%0A%0A CLIENTE%3A%20a%0A%0A ENDEREÇO%3A%20b%0A%0A QTD%20/%20PRODUTO%3A%0A0%20Água 20L%0A 0%20%0A%0A FORMA%20DE%20PAGAMENTO%3A%20Cartão%20%0A VALOR%20TOTAL%3A%20R$ 0.00%0A%0A %20%0A FIM%20DO%20PEDIDO%0A

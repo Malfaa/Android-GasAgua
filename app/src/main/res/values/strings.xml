@@ -9,18 +9,18 @@
     <string name="nao">Não</string>
     <string name="endereco">Bairro, Rua, Número </string>
     <string name="totalC">TOTAL DA COMPRA: </string>
-    <string name="valorT">&#160;</string>
+    <string name="valorT">R$&#160;</string>
     <string name="formaDeP">FORMA DE PAGAMENTO:</string>
     <string name="enviarpedido">ENVIAR PEDIDO</string>
     <string name="escolhaOutroProduto">ESCOLHA SEGUNDO PRODUTO: </string>
     <string name="hintTroco">Troco Para:(Exemplo) 10.00</string>
     <string name="nomeSobrenome">Nome Sobrenome</string>
-    <string name="hintNumero">Numero Exemplo: 5511987654321</string>
+    <string name="hintNumero">Numero Exemplo: 987654321</string>
     <string name="enviarPedido">Enviar Pedido</string>
+    <string name="numeroInicial">5511</string>
 
 
     <string-array name="produtos">
-        <item> </item>
         <item>Água 20L<n/></item>
         <item>Gás 13KG</item>
     </string-array>
@@ -39,9 +39,7 @@
     </string-array>
 
     <string-array name="formaPagamento">
-        <item> </item>
         <item>Cartão</item>
-        <item> </item>
         <item>Dinheiro</item>
     </string-array>
 

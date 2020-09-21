@@ -13,14 +13,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/P1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:drawableStart="@drawable/ic_waves"
-                android:text="@string/escolha_seu_produto"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        <TextView
+            android:id="@+id/P1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:drawableStart="@drawable/ic_waves"
+            android:text="@string/escolha_seu_produto"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <Spinner
                 android:id="@+id/EP1"
@@ -125,7 +126,8 @@
                 android:inputType="number"
                 android:visibility="gone" />
 
-            <EditText
+
+        <EditText
                 android:id="@+id/NOME"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
@@ -152,6 +154,7 @@
                 android:layout_marginTop="10dp"
                 android:autofillHints="10.00"
                 android:ems="10"
+                android:text="@string/numeroInicial"
                 android:hint="@string/hintNumero"
                 android:inputType="number" />
 
@@ -172,13 +175,13 @@
             android:text="@string/valorT" />
 
         <Button
-                android:id="@+id/enviarPedido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:background="#E4CAF4"
-                android:text="@string/enviarPedido" />
+            android:id="@+id/enviarPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#E4CAF4"
+            android:text="@string/enviarPedido" />
 
     </LinearLayout>
 
