@@ -83,10 +83,12 @@ public class Principal extends AppCompatActivity {
             }else {
                 conteudoEscondido.setVisibility(View.GONE);
 
-            }if (ep2Var.equals("Gás 13KG")) {
+            }if (ep2Var.equals("Gás 13KG") && confirmaMaisVar.equals("Sim")) {
                 valorP2 = (85 * Integer.parseInt(qtdp2.getSelectedItem().toString()));
-            } else {
+            } else if (ep2Var.equals("Água 20L")&&confirmaMaisVar.equals("Sim")){
                 valorP2 = (10 * Integer.parseInt(qtdp2.getSelectedItem().toString()));
+            }else{
+                valorP2 = 0;
             }
             if (parent.getItemAtPosition(position).equals("Dinheiro")) {
                 troco.setVisibility(View.VISIBLE);
