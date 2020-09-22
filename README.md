@@ -6,6 +6,8 @@ Construção focada em sistema de pedido com integração do Whatsapp.
 <h3>*Projeto amador para fins de aprendizagem.*</h3>
 <h3>*App for learning purpose.*</h3>
 
+
+
 <h4>Projeto:</h4>
 
 App feito para encomenda dos produtos água e gás via Whatsapp. O pedido é feito via app e enviado a um número que for digitado no 
@@ -15,15 +17,16 @@ campo de telefone celular(55 (ddd) 9xxxxxxxx, sem espaçamento e sem caractere e
 
 <h4>Corpo do Pedido(mensagem):</h4>
 
----NOVO PEDIDO--- </br>
+---NOVO PEDIDO--- 
+
 Cliente: x
 
 Endereco: x
 
-Quantidade/ Produto: </br>
+Quantidade/ Produto: 
 1 Gás 13KG 
 
-Forma De Pagamento: Cartão</br>
+Forma De Pagamento: Cartão
 Troco:  
 Valor Total: R$ 85
 
