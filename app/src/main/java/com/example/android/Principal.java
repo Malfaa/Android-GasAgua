@@ -149,8 +149,6 @@ public class Principal extends AppCompatActivity {
                     i.setData(Uri.parse(url));
                     startActivity(i);
                 }
-
             });
         }
 }
-//https://api.whatsapp.com/send?phone=0&text=----%20NOVO%20PEDIDO%20----%0A%0A CLIENTE%3A%20a%0A%0A ENDEREÇO%3A%20b%0A%0A QTD%20/%20PRODUTO%3A%0A0%20Água 20L%0A 0%20%0A%0A FORMA%20DE%20PAGAMENTO%3A%20Cartão%20%0A VALOR%20TOTAL%3A%20R$ 0.00%0A%0A %20%0A FIM%20DO%20PEDIDO%0A
