@@ -15,11 +15,10 @@
     <string name="escolhaOutroProduto">ESCOLHA SEGUNDO PRODUTO: </string>
     <string name="hintTroco">Troco Para:(Exemplo) 10.00</string>
     <string name="nomeSobrenome">Nome Sobrenome</string>
-    <string name="hintNumero">Numero Exemplo: 987654321</string>
+    <string name="hintNumero">Numero Exemplo: 5511987654321</string>
     <string name="enviarPedido">Enviar Pedido</string>
     <string name="numeroInicial">5511</string>
     <string name="r">R$</string>
-
 
     <string-array name="produtos">
         <item>Água 20L<n/></item>
