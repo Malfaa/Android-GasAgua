@@ -73,10 +73,10 @@ public class Principal extends AppCompatActivity {
             ep1Var = ep1.getSelectedItem().toString();
             ep2Var = ep2.getSelectedItem().toString();
 
-            if (ep1Var.equals("Gás 13KG")) {//ep1Var.equals
+            if (ep1Var.equals("Gás 13KG")) {
                 valorP1 = 85 *Integer.parseInt(qtdp1.getSelectedItem().toString());
-            } else {//if(parent.getItemAtPosition(position).equals("Água 20L"))
-                valorP1 = 10 * Integer.parseInt(qtdp1.getSelectedItem().toString());}//qtdp1Var
+            } else {
+                valorP1 = 10 * Integer.parseInt(qtdp1.getSelectedItem().toString());}
 
             if (confirmaMaisVar.equals("Sim")) {
                 conteudoEscondido.setVisibility(View.VISIBLE);
@@ -120,7 +120,6 @@ public class Principal extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_principal);
 
-
             variablesIdSpinner();
 
             conteudoEscondido.setVisibility(View.GONE);
@@ -130,12 +129,27 @@ public class Principal extends AppCompatActivity {
             setandoListenerSpinner();
 
             enviarPedido.setOnClickListener(v -> {
-                String url = "https://api.whatsapp.com/send?phone=" + celularNumero.getText() + "&text=---NOVO%20PEDIDO---%20%0ACliente%3A%20" + nome.getText()+"%0A%0AEndereco%3A%20%"+
-                        endereco.getText()+"%0A%0AQuantidade%2F%20Produto%3A%20%0A"+qtdp1.getSelectedItem()+" "+ep1.getSelectedItem()+"%20%0A%0AForma%20De%20Pagamento%3A%20"+
-                        formaDePag.getSelectedItem()+"%20%0AValor%20Total%3A%20R$%20"+valorT+"%0A%0A %20%0A FIM%20DO%20PEDIDO%0A";
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
+                if(confirmaMaisVar.equals("Sim")){
+                    String url = "https://api.whatsapp.com/send?phone=" + celularNumero.getText() + "&text=---NOVO%20PEDIDO---%20%0A%0ACliente%3A%20" + nome.getText()+"%0A%0AEndereco%3A%20"+
+                            endereco.getText()+"%0A%0AQuantidade%2F%20Produto%3A%20%0A"+qtdp1.getSelectedItem()+
+                            " "+ep1.getSelectedItem()+"%20%0A"+qtdp2.getSelectedItem()+" "+ep2.getSelectedItem()+"%0A%20%0AForma%20De%20Pagamento%3A%20"+
+                            formaDePag.getSelectedItem()+"%0ATroco:%20"+troco.getText()+"%20%0AValor%20Total%3A%20R$%20"+valorT+"%0A%0A %20%0A FIM%20DO%20PEDIDO%0A";
+
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+
+                }else{
+                    String url = "https://api.whatsapp.com/send?phone=" + celularNumero.getText() + "&text=---NOVO%20PEDIDO---%20%0A%0ACliente%3A%20" + nome.getText()+"%0A%0AEndereco%3A%20"+
+                            endereco.getText()+"%0A%0AQuantidade%2F%20Produto%3A%20%0A"+qtdp1.getSelectedItem()+
+                            " "+ep1.getSelectedItem()+"%20%0A%0AForma%20De%20Pagamento%3A%20"+
+                            formaDePag.getSelectedItem()+"%0ATroco:%20"+troco.getText()+"%20%0AValor%20Total%3A%20R$%20"+valorT+"%0A%0A %20%0A FIM%20DO%20PEDIDO%0A";
+
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+
             });
         }
 }

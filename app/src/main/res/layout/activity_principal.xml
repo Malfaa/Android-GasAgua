@@ -20,6 +20,7 @@
             android:layout_marginTop="10dp"
             android:background="#FFFFFF"
             android:drawableStart="@drawable/ic_waves"
+            android:fontFamily="sans-serif-black"
             android:text="@string/escolha_seu_produto"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -36,6 +37,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="30dp"
                 android:drawableStart="@drawable/ic_waves"
+                android:fontFamily="sans-serif-black"
                 android:text="@string/quantidade"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -52,6 +54,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="30dp"
                 android:drawableStart="@drawable/ic_waves"
+                android:fontFamily="sans-serif-black"
                 android:text="@string/deseja_algo_mais" />
 
             <Spinner
@@ -73,12 +76,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:drawableStart="@drawable/ic_waves"
+                    android:fontFamily="sans-serif-black"
                     android:text="@string/escolhaOutroProduto"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <Spinner
                     android:id="@+id/EP2"
-                    android:layout_width="match_parent"
+                    android:layout_width="250dp"
                     android:layout_height="23dp"
                     android:layout_marginTop="10dp"
                     android:spinnerMode="dialog" />
@@ -88,6 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif-black"
                     android:drawableStart="@drawable/ic_waves"
                     android:text="@string/quantidade"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -105,6 +110,7 @@
                 android:layout_width="250dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
                 android:drawableStart="@drawable/ic_waves"
                 android:text="@string/formaDeP" />
 
@@ -166,12 +172,15 @@
             android:layout_marginStart="90dp"
             android:text="@string/totalC" />
 
+
+
         <TextView
             android:id="@+id/totalValorVar"
-            android:layout_width="80dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="135dp"
+            android:layout_marginStart="145dp"
+            android:hint="@string/r"
             android:text="@string/valorT" />
 
         <Button
