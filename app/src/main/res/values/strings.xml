@@ -2,23 +2,25 @@
     <string name="app_name">GásÁguaApp</string>
     <string name="fazer_pedido">Fazer Pedido</string>
     <string name="imagem">\@string/Imagem</string>
-    <string name="quantidade">QUANTIDADE:</string>
-    <string name="escolha_seu_produto">ESCOLHA SEU PRODUTO:</string>
-    <string name="deseja_algo_mais">DESEJA ALGO MAIS?</string>
+    <string name="quantidade">Quantidade:</string>
+    <string name="escolha_seu_produto">Escolha seu Produto:</string>
+    <string name="deseja_algo_mais">Adicionar mais Produtos?</string>
     <string name="sim">Sim</string>
     <string name="nao">Não</string>
     <string name="endereco">Bairro, Rua, Número </string>
-    <string name="totalC">TOTAL DA COMPRA: </string>
+    <string name="totalC">Valor Total da Compra: </string>
     <string name="valorT">&#160;</string>
-    <string name="formaDeP">FORMA DE PAGAMENTO:</string>
+    <string name="formaDeP">Forma de pagamento:</string>
     <string name="enviarpedido">ENVIAR PEDIDO</string>
-    <string name="escolhaOutroProduto">ESCOLHA SEGUNDO PRODUTO: </string>
+    <string name="escolhaOutroProduto">Produto adicional: </string>
     <string name="hintTroco">Troco Para:(Exemplo) 10.00</string>
     <string name="nomeSobrenome">Nome Sobrenome</string>
     <string name="hintNumero">Numero Exemplo: 5511987654321</string>
     <string name="enviarPedido">Enviar Pedido</string>
     <string name="numeroInicial">5511</string>
     <string name="r">R$</string>
+    <string name="gasAgua">Gás e Água</string>
+    <string name="ilus">Page inicial apenas ilustrativa.</string>
 
     <string-array name="produtos">
         <item>Água 20L<n/></item>
