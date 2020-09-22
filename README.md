@@ -1,7 +1,10 @@
 # Android-GasAgua
 Construção focada em sistema de pedido com integração do Whatsapp.
 
+
+
 <h3>*Projeto amador para fins de aprendizagem.*</h3>
+<h3>*App for learning purpose.*</h3>
 
 <h4>Projeto:</h4></br>
 App feito para encomenda dos produtos água e gás via Whatsapp. O pedido é feito via app e enviado a um número que for digitado no 
