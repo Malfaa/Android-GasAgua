@@ -13,7 +13,7 @@ Construção focada em sistema de pedido com integração do Whatsapp.
 App feito para encomenda dos produtos água e gás via Whatsapp. O pedido é feito via app e enviado a um número que for digitado no 
 campo de telefone celular(55 (ddd) 9xxxxxxxx, sem espaçamento e sem caractere especial) e é enviado em forma de pedido ao número do destinatário.
 
-<h4>Essa parte do código que faz essa formatação da mensagem: </h4>
+<h4>Código da url que envia o pedido: </h4>
 
 <pre><code>String url = "https://api.whatsapp.com/send?phone=" + celularNumero.getText() + "&text=---NOVO%20PEDIDO---
 %20%0A%0ACliente%3A%20" + nome.getText()+"%0A%0AEndereco%3A%20"+endereco.getText()+"%0A%0AQuantidade%2F%20Produto%3A%20%0A"
