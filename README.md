@@ -1,10 +1,10 @@
 # Android-GasAgua
-Construção focada em sistema de pedido com integração do Whatsapp.
+Construção focada em sistema de pedido com integração do Whatsapp. 
 
 
 
-<h3>*Projeto amador para fins de aprendizagem.*</h3>
-<h3>*App for learning purpose.*</h3>
+<h3>*Projeto amador para fins de aprendizagem- Java.*</h3>
+<h3>*App for learning purpose - Java*</h3>
 
 
 
